@@ -5,8 +5,11 @@
     "BOOTSTRAPSERVERS",
     "CONVERSIONPATTERN",
     "KAFKACONNECT",
+    "KAFKAJS",
     "localnet",
+    "PARTITIONER",
     "provectuslabs",
+    "Vahid",
     "wenex"
   ]
 }
