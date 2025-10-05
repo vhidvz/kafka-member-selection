@@ -7,9 +7,7 @@ PARALLEL_REQUESTS=15
 make_request() {
     # Generate random integer between 0 and 14
     id=$((RANDOM % 15))
-    # Randomly choose between port 3001 and 3002
-    port=$((3001 + (RANDOM % 2)))
-    url="http://localhost:${port}/${id}"
+    url="http://localhost:3000/${id}"
     echo "Making request to $url"
     # Use curl to make the GET request, with timeout and silent mode
     curl -s -m 5 "$url" > /dev/null

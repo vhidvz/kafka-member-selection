@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'combination',
       script: 'dist/main.js',
-      instances: 3,
+      instances: 5,
       exec_mode: 'cluster',
     },
   ],
