@@ -12,8 +12,9 @@ import { AppController } from './app.controller';
         name: APP_CLIENT,
         transport: Transport.KAFKA,
         options: {
-          producerOnlyMode: true,
-          client: { clientId: 'producer', brokers: ['localhost:9092'] },
+          subscribe: { fromBeginning: true },
+          consumer: { groupId: 'producer-group' },
+          client: { clientId: 'producer-client', brokers: ['10.16.0.181:9092'] },
         },
       },
     ]),
@@ -21,4 +22,4 @@ import { AppController } from './app.controller';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
