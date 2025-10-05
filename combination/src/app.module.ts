@@ -13,8 +13,8 @@ import { AppController } from './app.controller';
         transport: Transport.KAFKA,
         options: {
           subscribe: { fromBeginning: true },
-          consumer: { groupId: 'producer-group' },
-          client: { clientId: 'producer-client', brokers: ['127.0.0.1:9092'] },
+          consumer: { groupId: 'combination-group' },
+          client: { clientId: 'combination-client', brokers: ['127.0.0.1:9092'] },
         },
       },
     ]),

@@ -9,10 +9,11 @@ async function bootstrap() {
     transport: Transport.KAFKA,
     options: {
       subscribe: { fromBeginning: true },
-      client: { clientId: 'consumer-client', brokers: ['127.0.0.1:9092'] },
-      consumer: { groupId: 'consumer-group' },
+      consumer: { groupId: 'combination-group' },
+      client: { clientId: 'combination-client', brokers: ['127.0.0.1:9092'] },
     },
   });
   await app.startAllMicroservices();
+  await app.listen(process.env.PORT ?? 3000);
 }
 void bootstrap();
